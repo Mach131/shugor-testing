@@ -18,7 +18,7 @@ public class AnimationController : MonoBehaviour {
 		anim.SetFloat("Horizontal",horiz); //Sending the horizontal value to the animator component.
 		anim.SetFloat("Vertical",vertic); //Sending the vertical value to the animator component.
 		if (horiz!=0.0f) {
-			transform.localScale = new Vector3(Mathf.Sign(horiz)*-1f*0.4f,transform.localScale.y,transform.localScale.z); //sets the player model's direction.
+			transform.localScale = new Vector3(Mathf.Sign(horiz)*-1f*Mathf.Abs(transform.localScale.x),transform.localScale.y,transform.localScale.z); //sets the player model's direction.
 		}
 	}
 }
